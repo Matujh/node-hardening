@@ -1,0 +1,19 @@
+--- /home/opilane/node-hardening/evidence/before.txt	2026-10-23 09:33:01.255524226 +0300
++++ /home/opilane/node-hardening/evidence/after.txt	2026-10-23 09:33:02.975523997 +0300
+@@ -11,6 +11,7 @@
+   cron.service                loaded active running Regular background program processing daemon
+   dbus.service                loaded active running D-Bus System Message Bus
+   getty@tty1.service          loaded active running Getty on tty1
++  packagekit.service          loaded active running PackageKit Daemon
+   polkit.service              loaded active running Authorization Manager
+   rsyslog.service             loaded active running System Logging Service
+   ssh.service                 loaded active running OpenBSD Secure Shell server
+@@ -26,7 +27,7 @@
+         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+         SUB    → The low-level unit activation state, values depend on unit type.
+ 
+-15 loaded units listed.
++16 loaded units listed.
+ 616
+ /usr/lib/openssh/ssh-keysign
+ /usr/lib/landscape/apt-update

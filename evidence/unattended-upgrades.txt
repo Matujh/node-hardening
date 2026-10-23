@@ -1,0 +1,123 @@
+/etc/apt/apt.conf.d/50unattended-upgrades:Unattended-Upgrade::Allowed-Origins {
+/etc/apt/apt.conf.d/50unattended-upgrades:Unattended-Upgrade::Package-Blacklist {
+/etc/apt/apt.conf.d/50unattended-upgrades:Unattended-Upgrade::DevRelease "auto";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::AutoFixInterruptedDpkg "true";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::MinimalSteps "true";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::InstallOnShutdown "false";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::Mail "";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::MailReport "on-change";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::Remove-New-Unused-Dependencies "true";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::Remove-Unused-Dependencies "false";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::Automatic-Reboot "false";
+/etc/apt/apt.conf.d/50unattended-upgrades:// when Unattended-Upgrade::Automatic-Reboot is set to true
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::Automatic-Reboot-WithUsers "true";
+/etc/apt/apt.conf.d/50unattended-upgrades://Unattended-Upgrade::Automatic-Reboot-Time "02:00";
+/etc/apt/apt.conf.d/50unattended-upgrades:// Unattended-Upgrade::SyslogEnable "false";
+/etc/apt/apt.conf.d/50unattended-upgrades:// Unattended-Upgrade::SyslogFacility "daemon";
+/etc/apt/apt.conf.d/50unattended-upgrades:// Unattended-Upgrade::OnlyOnACPower "true";
+/etc/apt/apt.conf.d/50unattended-upgrades:// Unattended-Upgrade::Skip-Updates-On-Metered-Connections "true";
+/etc/apt/apt.conf.d/50unattended-upgrades:// Unattended-Upgrade::Verbose "false";
+/etc/apt/apt.conf.d/50unattended-upgrades:// Unattended-Upgrade::Debug "false";
+/etc/apt/apt.conf.d/50unattended-upgrades:// Unattended-Upgrade::Allow-downgrade "false";
+/etc/apt/apt.conf.d/50unattended-upgrades:// Unattended-Upgrade::Allow-APT-Mark-Fallback "true";
+/etc/apt/apt.conf.d/20auto-upgrades:APT::Periodic::Unattended-Upgrade "1";
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Unattended-Upgrade "1";
+### dry run
+Checking: python3-distupgrade ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: python3-distupgrade=1:24.04.28
+Checking: python3-netplan ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: python3-netplan=1.1.2-8ubuntu1~24.04.1
+Checking: python3-problem-report ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: python3-problem-report=2.28.1-0ubuntu3.8
+Checking: python3-software-properties ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: python3-software-properties=0.99.49.3
+Checking: snapd ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: snapd=2.76+ubuntu24.04.1
+Checking: software-properties-common ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: software-properties-common=0.99.49.3
+Checking: systemd-hwe-hwdb ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: systemd-hwe-hwdb=255.1.6
+Checking: tmux ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: tmux=3.4-1ubuntu0.1
+Checking: ubuntu-pro-client ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: ubuntu-pro-client=37.2ubuntu~24.04.1
+Checking: ubuntu-pro-client-l10n ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: ubuntu-pro-client-l10n=37.2ubuntu~24.04.1
+Checking: ubuntu-release-upgrader-core ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: ubuntu-release-upgrader-core=1:24.04.28
+Checking: wsl-setup ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+adjusting candidate version: wsl-setup=0.5.10~24.04.1
+pkgs that look like they should be upgraded: 
+Fetched 0 B in 0s (0 B/s)                                                       
+fetch.run() result: 0
+Packages blacklist due to conffile prompts: []
+No packages found that can be upgraded unattended and no pending auto-removals
+The list of kept packages can't be calculated in dry-run mode.
+### real run
+Checking if system is running on battery is skipped. Please install powermgmt-base package to check power status and skip installing updates when the system is running on battery.
+Starting unattended upgrades script
+Allowed origins are: o=Ubuntu,a=noble, o=Ubuntu,a=noble-security, o=UbuntuESMApps,a=noble-apps-security, o=UbuntuESM,a=noble-infra-security
+Initial blacklist: 
+Initial whitelist (not strict): 
+No packages found that can be upgraded unattended and no pending auto-removals
+### journal
+Apr 29 12:55:02 K-B302-23-06 systemd[1]: Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+Apr 29 12:57:06 K-B302-23-06 systemd[1]: unattended-upgrades.service: Deactivated successfully.
+-- Boot 21209442b8014c42bc0de5b42358edef --
+May 13 12:40:47 K-B302-23-06 systemd[1]: Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+May 13 12:41:11 K-B302-23-06 systemd[1]: unattended-upgrades.service: Deactivated successfully.
+-- Boot 26cd8ac80a324341afb3a98d768df64a --
+Oct 16 09:36:20 K-B302-23-06 systemd[1]: Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+Oct 16 09:46:59 K-B302-23-06 systemd[1]: unattended-upgrades.service: Deactivated successfully.
+-- Boot 6e0beffe15184d519e0e488ec8abe005 --
+Oct 23 08:55:23 K-B302-23-06 systemd[1]: Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+### log file
+2026-10-23 09:33:05,678 DEBUG adjusting candidate version: python-apt-common=2.7.7ubuntu5.2
+2026-10-23 09:33:05,686 DEBUG Checking: python3-apport ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,688 DEBUG adjusting candidate version: python3-apport=2.28.1-0ubuntu3.8
+2026-10-23 09:33:05,696 DEBUG Checking: python3-apt ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,697 DEBUG adjusting candidate version: python3-apt=2.7.7ubuntu5.2
+2026-10-23 09:33:05,706 DEBUG Checking: python3-distupgrade ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,707 DEBUG adjusting candidate version: python3-distupgrade=1:24.04.28
+2026-10-23 09:33:05,717 DEBUG Checking: python3-netplan ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,718 DEBUG adjusting candidate version: python3-netplan=1.1.2-8ubuntu1~24.04.1
+2026-10-23 09:33:05,729 DEBUG Checking: python3-problem-report ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,730 DEBUG adjusting candidate version: python3-problem-report=2.28.1-0ubuntu3.8
+2026-10-23 09:33:05,742 DEBUG Checking: python3-software-properties ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,743 DEBUG adjusting candidate version: python3-software-properties=0.99.49.3
+2026-10-23 09:33:05,760 DEBUG Checking: snapd ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,761 DEBUG adjusting candidate version: snapd=2.76+ubuntu24.04.1
+2026-10-23 09:33:05,773 DEBUG Checking: software-properties-common ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,774 DEBUG adjusting candidate version: software-properties-common=0.99.49.3
+2026-10-23 09:33:05,784 DEBUG Checking: systemd-hwe-hwdb ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,785 DEBUG adjusting candidate version: systemd-hwe-hwdb=255.1.6
+2026-10-23 09:33:05,797 DEBUG Checking: tmux ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,798 DEBUG adjusting candidate version: tmux=3.4-1ubuntu0.1
+2026-10-23 09:33:05,810 DEBUG Checking: ubuntu-pro-client ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,811 DEBUG adjusting candidate version: ubuntu-pro-client=37.2ubuntu~24.04.1
+2026-10-23 09:33:05,819 DEBUG Checking: ubuntu-pro-client-l10n ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,821 DEBUG adjusting candidate version: ubuntu-pro-client-l10n=37.2ubuntu~24.04.1
+2026-10-23 09:33:05,830 DEBUG Checking: ubuntu-release-upgrader-core ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,831 DEBUG adjusting candidate version: ubuntu-release-upgrader-core=1:24.04.28
+2026-10-23 09:33:05,843 DEBUG Checking: wsl-setup ([<Origin component:'main' archive:'noble-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>])
+2026-10-23 09:33:05,843 DEBUG adjusting candidate version: wsl-setup=0.5.10~24.04.1
+2026-10-23 09:33:05,887 DEBUG pkgs that look like they should be upgraded: 
+2026-10-23 09:33:05,896 DEBUG fetch.run() result: 0
+2026-10-23 09:33:05,929 DEBUG Packages blacklist due to conffile prompts: []
+2026-10-23 09:33:05,929 INFO No packages found that can be upgraded unattended and no pending auto-removals
+2026-10-23 09:33:05,929 INFO The list of kept packages can't be calculated in dry-run mode.
+2026-10-23 09:33:06,029 INFO Checking if system is running on battery is skipped. Please install powermgmt-base package to check power status and skip installing updates when the system is running on battery.
+2026-10-23 09:33:06,031 INFO Starting unattended upgrades script
+2026-10-23 09:33:06,031 INFO Allowed origins are: o=Ubuntu,a=noble, o=Ubuntu,a=noble-security, o=UbuntuESMApps,a=noble-apps-security, o=UbuntuESM,a=noble-infra-security
+2026-10-23 09:33:06,031 INFO Initial blacklist: 
+2026-10-23 09:33:06,031 INFO Initial whitelist (not strict): 
+2026-10-23 09:33:07,127 INFO No packages found that can be upgraded unattended and no pending auto-removals
+### timers
+NEXT                         LEFT LAST                            PASSED UNIT                    ACTIVATES
+Fri 2026-10-23 22:06:09 EEST  12h Fri 2026-10-23 09:33:00 EEST    6s ago apt-daily.timer         apt-daily.service
+Sat 2026-10-24 06:34:26 EEST  21h Fri 2026-10-23 08:59:14 EEST 33min ago apt-daily-upgrade.timer apt-daily-upgrade.service
+
+2 timers listed.
+Pass --all to see loaded but inactive timers, too.

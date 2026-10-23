@@ -1,0 +1,43 @@
+== 0. Build the intentionally bloated system ==
+== 9.A step 1: before snapshot ==
+== 9.A step 2: remove services/packages ==
+== 9.A step 3: account audit ==
+== 9.A step 4: after snapshot + diff ==
+== 9.B steps 1-2: SSH key login + hardening ==
+Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+key login OK
+sshd -t OK, reloaded
+$ ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no localhost
+opilane@localhost: Permission denied (publickey).
+== 9.B step 3: ProxyJump demo (localhost stands in for router + lan-b) ==
+$ ssh -F ssh_config_demo lan-b hostname
+Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.
+K-B302-23-06
+== 9.B steps 4-5: unattended upgrades + force a run ==
+== 9.B step 6: nmap ==
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-10-23 09:03 EEST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000035s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.20 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.58 ((Ubuntu))
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 6.18 seconds
+
+DONE. Evidence in /home/opilane/lab9-evidence:
+00-hardening.conf
+accounts-audit.txt
+after.txt
+before.txt
+diff.txt
+justification.md
+nmap.txt
+password-refused.txt
+proxyjump-test.txt
+ssh_config_demo
+sshd-effective.txt
+sshd_config
+unattended-upgrades.txt

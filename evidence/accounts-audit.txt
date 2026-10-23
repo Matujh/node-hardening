@@ -1,0 +1,74 @@
+### Accounts with UID >= 1000
+opilane:x:1000:1000:,,,:/home/opilane:/bin/bash
+
+### Accounts with a login shell
+root:x:0:0:root:/root:/bin/bash
+opilane:x:1000:1000:,,,:/home/opilane:/bin/bash
+
+### passwd -S -a, not 'P' (locked / no password)
+root L 2026-02-10 0 99999 7 -1
+daemon L 2026-02-10 0 99999 7 -1
+bin L 2026-02-10 0 99999 7 -1
+sys L 2026-02-10 0 99999 7 -1
+sync L 2026-02-10 0 99999 7 -1
+games L 2026-02-10 0 99999 7 -1
+man L 2026-02-10 0 99999 7 -1
+lp L 2026-02-10 0 99999 7 -1
+mail L 2026-02-10 0 99999 7 -1
+news L 2026-02-10 0 99999 7 -1
+uucp L 2026-02-10 0 99999 7 -1
+proxy L 2026-02-10 0 99999 7 -1
+www-data L 2026-02-10 0 99999 7 -1
+backup L 2026-02-10 0 99999 7 -1
+list L 2026-02-10 0 99999 7 -1
+irc L 2026-02-10 0 99999 7 -1
+_apt L 2026-02-10 0 99999 7 -1
+nobody L 2026-02-10 0 99999 7 -1
+systemd-network L 2026-02-10 -1 -1 -1 -1
+systemd-timesync L 2026-02-10 -1 -1 -1 -1
+dhcpcd L 2026-02-10 -1 -1 -1 -1
+messagebus L 2026-02-10 -1 -1 -1 -1
+syslog L 2026-02-10 -1 -1 -1 -1
+systemd-resolve L 2026-02-10 -1 -1 -1 -1
+uuidd L 2026-02-10 -1 -1 -1 -1
+landscape L 2026-02-10 -1 -1 -1 -1
+polkitd L 2026-02-10 -1 -1 -1 -1
+sshd L 2026-10-23 -1 -1 -1 -1
+saned L 2026-10-23 -1 -1 -1 -1
+colord L 2026-10-23 -1 -1 -1 -1
+
+### Accounts with an EMPTY password field
+
+### lastlog
+Username         Port     From                                       Latest
+root                                                                **Never logged in**
+daemon                                                              **Never logged in**
+bin                                                                 **Never logged in**
+sys                                                                 **Never logged in**
+sync                                                                **Never logged in**
+games                                                               **Never logged in**
+man                                                                 **Never logged in**
+lp                                                                  **Never logged in**
+mail                                                                **Never logged in**
+news                                                                **Never logged in**
+uucp                                                                **Never logged in**
+proxy                                                               **Never logged in**
+www-data                                                            **Never logged in**
+backup                                                              **Never logged in**
+list                                                                **Never logged in**
+irc                                                                 **Never logged in**
+_apt                                                                **Never logged in**
+nobody                                                              **Never logged in**
+systemd-network                                                     **Never logged in**
+systemd-timesync                                                    **Never logged in**
+dhcpcd                                                              **Never logged in**
+messagebus                                                          **Never logged in**
+syslog                                                              **Never logged in**
+systemd-resolve                                                     **Never logged in**
+uuidd                                                               **Never logged in**
+landscape                                                           **Never logged in**
+polkitd                                                             **Never logged in**
+opilane                                                             **Never logged in**
+sshd                                                                **Never logged in**
+saned                                                               **Never logged in**
+colord                                                              **Never logged in**

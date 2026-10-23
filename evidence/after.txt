@@ -1,0 +1,45 @@
+State  Recv-Q Send-Q  Local Address:Port Peer Address:PortProcess                                                 
+LISTEN 0      4096       127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=14971,fd=17))            
+LISTEN 0      4096          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=5338,fd=3),("systemd",pid=1,fd=118))
+LISTEN 0      4096    127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=14971,fd=15))            
+LISTEN 0      1000   10.255.255.254:53        0.0.0.0:*                                                           
+LISTEN 0      4096             [::]:22           [::]:*    users:(("sshd",pid=5338,fd=4),("systemd",pid=1,fd=119))
+LISTEN 0      511                 *:80              *:*    users:(("apache2",pid=258,fd=4),("apache2",pid=256,fd=4),("apache2",pid=251,fd=4))
+  UNIT                        LOAD   ACTIVE SUB     DESCRIPTION
+  apache2.service             loaded active running The Apache HTTP Server
+  console-getty.service       loaded active running Console Getty
+  cron.service                loaded active running Regular background program processing daemon
+  dbus.service                loaded active running D-Bus System Message Bus
+  getty@tty1.service          loaded active running Getty on tty1
+  packagekit.service          loaded active running PackageKit Daemon
+  polkit.service              loaded active running Authorization Manager
+  rsyslog.service             loaded active running System Logging Service
+  ssh.service                 loaded active running OpenBSD Secure Shell server
+  systemd-journald.service    loaded active running Journal Service
+  systemd-logind.service      loaded active running User Login Management
+  systemd-resolved.service    loaded active running Network Name Resolution
+  systemd-timesyncd.service   loaded active running Network Time Synchronization
+  systemd-udevd.service       loaded active running Rule-based Manager for Device Events and Files
+  unattended-upgrades.service loaded active running Unattended Upgrades Shutdown
+  user@1000.service           loaded active running User Manager for UID 1000
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+16 loaded units listed.
+616
+/usr/lib/openssh/ssh-keysign
+/usr/lib/landscape/apt-update
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/bin/chsh
+/usr/bin/umount
+/usr/bin/chfn
+/usr/bin/mount
+/usr/bin/newgrp
+/usr/bin/fusermount3
+/usr/bin/su
+/usr/bin/sudo
+/usr/bin/gpasswd
+/usr/bin/passwd

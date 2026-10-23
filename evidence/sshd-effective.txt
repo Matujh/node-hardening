@@ -1,0 +1,16 @@
+### drop-in files
+00-hardening.conf
+
+### grep PasswordAuthentication
+/etc/ssh/sshd_config:#PasswordAuthentication yes
+/etc/ssh/sshd_config:# PasswordAuthentication.  Depending on your PAM configuration,
+/etc/ssh/sshd_config:# PAM authentication, then enable this but set PasswordAuthentication
+/etc/ssh/sshd_config.d/00-hardening.conf:PasswordAuthentication no
+
+### effective (sshd -T)
+maxauthtries 3
+permitrootlogin no
+pubkeyauthentication yes
+passwordauthentication no
+kbdinteractiveauthentication no
+x11forwarding no

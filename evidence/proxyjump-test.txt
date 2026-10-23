@@ -1,0 +1,2 @@
+$ ssh -F ssh_config_demo lan-b hostname
+K-B302-23-06
